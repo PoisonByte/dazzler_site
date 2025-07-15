@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Light up the World Tour</title>
+    <style>
+
+
+        body {
+            background: black;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+
+        img {
+            width: 200 px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        img:hover {
+            transform: scale(1.1);
+        }
+
+<body>
+        .right img {
+            display: block;
+            max-width: 200px;
+            margin: 0;
+            border:3px solid #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 20px #fff;
+            transition: box-shadow 0.3s;
+        }
+        .right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: grey;
+        }
+    </style>
+
+
+     <div class="center">
+    <a href="/home/">
+        <img src="{% static 'dazzler/disco.png' %}" alt="Disco">
+    </a>
+     </div>
+    </head>
+</body>
+</html>

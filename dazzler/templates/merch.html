@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+     <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <meta charset="UTF-8">
+    <title>Merch</title>
+<style>
+
+body {
+
+
+
+    .ticket-icon {
+        max-width: 150px;
+        height: auto;
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 0 0 10px #fff;
+        transition: transform 0.3s ease;
+    }
+
+    .ticket-icon:hover {
+        transform: scale(1.05);
+    }
+    background-color: black;
+            color: hotpink;
+            margin: 0;
+            font-family: "Showcard Gothic";
+            text-shadow: 0 0 30px rgb(197, 241, 231), 0 0 70px #0ff;
+    }
+.right {
+            margin-left: 10%;
+            padding: 30px;
+            width: 50%;
+            box-soxong: border-box;
+            text-align: center;
+        }
+
+        .right img {
+            max-width: 200px;
+            margin: 20px auto;
+            display: block;
+            border: 3px solid #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px #fff;
+            transition: box-shadow 0.3s;
+        }
+h1, h2, h3 {
+            text-align: center;
+        }
+
+
+</style>
+
+<body>
+<nav class="navbar">
+    <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'tour' %}">Tour Dates</a></li>
+        <li><a href="{% url 'merch' %}">Merch</a></li>
+        <li><a href="{% url 'landing' %}">Welcome Page</a></li>
+    </ul>
+</nav>
+
+<div class="main=content">
+
+</div>
+
+<h1> Merchandise</h1>
+
+<a href="{% url 'tour' %}">
+<h1> Buy Tickets Here! </h1>
+</a>
+
+<h2>
+    Light Up the World Album
+    <img src="{% static 'dazzler/disco.png' %}" alt="Album" class="ticket-icon">
+</h2>
+
+<h2>
+   Funko
+    <img src="{% static 'dazzler/funko.webp' %}" alt="funko"  class="ticket-icon">
+</h2>
+
+<h2>
+    Dazzler Shirt
+    <img src="{% static 'dazzler/shirt.jpg' %}" alt="Shirt"  class="ticket-icon">
+</h2>
+
+<h2>
+    Dazzler movie
+    <img src="{% static 'dazzler/movie.jpg' %}" alt="Movie"  class="ticket-icon">
+</h2>
+
+<h2>
+    Mutant and Proud Sticker
+    <img src="{% static 'dazzler/proud.png' %}" alt="Mutant and Proud"  class="ticket-icon">
+</h2>
+
+<h2>
+    X-Terminators Poster
+    <img src="{% static 'dazzler/x-terminators poster.jpg' %}" alt="Mutant and Proud"  class="ticket-icon">
+</h2>
+
+
+</body>
+</head>
+</html>

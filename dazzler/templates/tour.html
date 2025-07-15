@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Tour Dates</title>
+</head>
+<body>
+<nav class="navbar">
+    <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'tour' %}">Tour Dates</a></li>
+        <li><a href="{% url 'merch' %}">Merch</a></li>
+        <li><a href="{% url 'landing' %}">Welcome Page</a></li>
+    </ul>
+</nav>
+
+<div class="center">
+    <h1> Tour Dates</h1>
+    <img src="{% static 'dazzler/dazzlerdates.png' %}" alt="dates">
+</div>
+<h2>Buy Tickets now </h2>
+<img src="{% static 'dazzler/jefftravels.png' %}" alt="tickets">
+<a href="{%url 'home' %}">Back to home</a>
+
+<style>
+    body {
+
+    }
+
+        </style>
+
+</body>
+</html>
