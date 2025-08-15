@@ -1,10 +1,131 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Dazzler's World Tour</title>
+    <style>
+        body {
+
+            background: url('/static/dazzler/glitter.jpg');
+            background-size: auto;
+            color: #fff;
+
+
+            body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            background: rgba(0,0,0,0.3);
+            z-index: 1;
+        }
+
+            background-color: black;
+            color: lightgoldenrodyellow;
+            margin: 0;
+            font-family: "monospace";
+            text-shadow: 0 0 30px rgb(197, 241, 231), 0 0 70px #0ff;
+
+
+
+        }
+
+        nav a:hover {
+            background: #555;
+        }
+        .left {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 40%;
+            height: 100vh;
+            background-image: url("{% static 'dazzler/dazzler_home.jpg' %}");
+            background-size: cover;
+            background-position: center;
+            border-right: 2px solid #444;
+            z-index: 1;
+        }
+
+
+        .right {
+            margin-left: 30%;
+            padding: 50px;
+            width: 70%;
+            box-soxong: border-box;
+            text-align: center;
+        }
+
+        .right img {
+            max-width: 300px;
+            margin: 20px auto;
+            display: block;
+            border: 3px solid #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px #fff;
+            transition: box-shadow 0.3s;
+        }
+
+        .right img:hover {
+            box-shadow: 0 0 40px #0ff, 0 0 60px #0ff;
+        }
+        h1, h2, h3 {
+            text-align: center;
+        }
+
+        </style>
+
 </head>
 <body>
 
+        <!-- Left: Fixed Dazzler -->
+        <div class="left">
+
+        </div>
+        <!-- Right: Content -->
+        <div class="right">
+            <h1>✨Light up the World Tour✨</h1>
+
+    <!-- Featuring Mary Janes -->
+    <h2> 🕸️Featuring: The Mary Janes🕸️</h2>
+    <img src="{% static 'dazzler/the mary janes.jpg' %}" alt="The Mary Janes">
+
+    <!-- Special Guest: Luna Snow -->
+    <h2> ❄️Special Guest: Luna Snow❄️</h2>
+    <img src="{% static 'dazzler/luna snow.avif' %}" alt="Luna Snow">
+
+    <!Jeff the shark and Jubilee Icons -->
+    <h3> ✈️Tour Dates and Tickets🌍</h3>
+            <a href="{% url 'tour' %}">
+    <img src="{% static 'dazzler/jeff.png' %}" alt="Tour Dates">
+            </a>
+
+    <h3> 🛍️Merch🛒</h3>
+            <a href="{% url 'merch' %}">
+    <img src="{% static 'dazzler/jubilee.jpg' %}" alt="Jubilee Icon">
+                </a>
+                        <div class="center">
+                            <h1>Light Up the World Album</h1>
+                            <a href="{% url 'merch' %}">
+                <img src="{% static 'dazzler/disco.png' %}" alt="Disco">
+
+                        </div>
+            <!-- Navigation Bar -->
+<nav class="navbar">
+    <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'tour' %}">Tour Dates</a></li>
+        <li><a href="{% url 'merch' %}">Merch</a></li>
+        <li><a href="{% url 'landing' %}">Welcome Page</a></li>
+
+    </ul>
+</nav>
+
+        </div>
+    </div>
 </body>
 </html>

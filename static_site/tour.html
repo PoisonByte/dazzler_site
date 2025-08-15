@@ -1,0 +1,118 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
+<head>
+ <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <meta charset="UTF-8">
+    <title>Tour Dates</title>
+</head>
+<body>
+<nav class="navbar">
+    <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'tour' %}">Tour Dates</a></li>
+        <li><a href="{% url 'merch' %}">Merch</a></li>
+        <li><a href="{% url 'landing' %}">Welcome Page</a></li>
+    </ul>
+</nav>
+
+<h1>Tour Dates</h1>
+    <h1>
+    <img src="{% static 'dazzler/dazzlerdates.png' %}" alt="dates">
+</h1>
+
+<h2>
+
+<img src="{% static 'dazzler/jefftravels.png' %}" alt="tickets" class="ticket-icon">
+
+</h2>
+
+<h3>Buy Tickets now</h3>
+
+
+<style>
+    body {
+background: url('/static/dazzler/glitter.jpg');
+            background-size: auto;
+            color: #fff;
+.ticket-icon {
+        max-width: 150px;
+        height: auto;
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 0 0 10px #fff;
+        transition: transform 0.3s ease;
+    }
+        .ticket-icon:hover {
+        transform: scale(1.05);
+
+            body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            background: rgba(0,0,0,0.3);
+            z-index: 1;
+        }
+
+            background-color: black;
+            color: lightgoldenrodyellow;
+            margin: 0;
+            font-family: "monospace";
+            text-shadow: 0 0 30px rgb(197, 241, 231), 0 0 70px #0ff;
+
+
+
+        }
+
+        nav a:hover {
+            background: #555;
+        }
+        .left {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 40%;
+            height: 100vh;
+            background-image: url("{% static 'dazzler/dazzler_home.jpg' %}");
+            background-size: cover;
+            background-position: center;
+            border-right: 2px solid #444;
+            z-index: 1;
+        }
+
+
+        .right {
+            margin-left: 30%;
+            padding: 50px;
+            width: 70%;
+            box-soxong: border-box;
+            text-align: center;
+        }
+
+        .right img {
+            max-width: 300px;
+            margin: 20px auto;
+            display: block;
+            border: 3px solid #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px #fff;
+            transition: box-shadow 0.3s;
+        }
+
+        .right img:hover {
+            box-shadow: 0 0 40px #0ff, 0 0 60px #0ff;
+        }
+        h1, h2, h3 {
+            text-align: center;
+
+    }
+
+        </style>
+
+</body>
+</html>
